@@ -4,8 +4,10 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Mockery\Generator\StringManipulation\Pass\Pass;
 
 class User extends Authenticatable
 {
@@ -43,5 +45,12 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+    public function gallerys():HasMany
+    {
+        return $this->hasMany(Gallery::class);
+    }
+    public function shares():HasMany{
+        return $this->hasMany(Share::class);
     }
 }
