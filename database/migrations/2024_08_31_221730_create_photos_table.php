@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('share', function (Blueprint $table) {
+        Schema::create('photos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->foreignId('photo_id');
-            $table->foreignId('gallery_id');
-            $table->dateTime('shared_at');
+            $table->text('photo_description');
+            $table->text('photo_comment');
+            $table->datetime('Upload_time');
+            $table->foreignId('gallery_id')->nullable()->constrained('galleries')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('share');
+        Schema::dropIfExists('photos');
     }
 };

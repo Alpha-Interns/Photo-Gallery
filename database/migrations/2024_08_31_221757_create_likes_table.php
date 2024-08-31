@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('gallery', function (Blueprint $table) {
+        Schema::create('likes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->string('name');
-            $table->longText('gallery_descripiton');
-            $table->longText('gallery_comments');
-            $table->string('thumbnail');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('photo_id')->nullable()->constrained('photos')->onDelete('cascade');
+            $table->datetime('liked_at');
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('gallery');
+        Schema::dropIfExists('likes');
     }
 };

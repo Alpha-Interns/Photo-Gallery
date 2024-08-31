@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Share extends Model
 {
     use HasFactory;
-
     public function user(){
         return $this->belongsTo(User::class);
     }
