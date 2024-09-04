@@ -8,10 +8,24 @@ use Illuminate\Database\Eloquent\Model;
 class Photo extends Model
 {
     use HasFactory;
-    public function gallery(){
+
+    // Fillable attributes
+    protected $fillable = [
+        'photo_description',
+        'photo_comment',
+        'Upload_time',
+        'gallery_id',
+        'photo_path',
+    ];
+
+    // Relationships
+    public function gallery()
+    {
         return $this->belongsTo(Gallery::class);
     }
-    public function share(){
+
+    public function share()
+    {
         return $this->hasMany(Share::class);
     }
 }

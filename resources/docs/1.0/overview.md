@@ -1,8 +1,7 @@
-# Introduction
-Welcome to the documentation for the Photo Gallery Application. This application is designed to allow photographers to upload, manage, and share their photos within organized galleries. Users can view, like, and share these photos and galleries with others.
 
 # Database Schema Overview
 
+Welcome to the documentation for the Photo Gallery Application. This application is designed to allow photographers to upload, manage, and share their photos within organized galleries. Users can view, like, and share these photos and galleries with others.
 This document provides an overview of the database schema for the Photo Gallery Application. The schema is designed to manage users, galleries, photos, likes, and sharing functionality.
 
 ## Database Schema
@@ -15,7 +14,7 @@ The database schema is designed to handle the core functionalities of the photo 
 - **Like:** Tracks the likes on photos by users.
 - **Share:** Logs sharing activities, including what was shared, when, and where it was shared.
 
-Detailed descriptions of each table and their relationships are provided in the [Overview](overview.md).
+
 
 ## Tables and Relationships
 ### 1. User Table
