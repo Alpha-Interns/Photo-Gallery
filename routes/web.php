@@ -5,15 +5,21 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\ShareController;
-use Illuminate\Support\Facades\Auth;
-
-Auth::routes();
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
 
 
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+#LogIn and Register Routes
+Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('register', [RegisterController::class, 'register']);
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 // Resource Routes for Galleries and Photos
 Route::resource('galleries', GalleryController::class)->middleware('auth');
@@ -37,10 +43,3 @@ Route::post('/photos/{photo}/share', [ShareController::class, 'sharePhoto'])
     ->name('shares.sharePhoto'); // Share a photo
 
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
