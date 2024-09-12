@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
+            $table->string('path');
             $table->text('photo_description');
             $table->text('photo_comment')->nullable(); 
             $table->datetime('Upload_time');
