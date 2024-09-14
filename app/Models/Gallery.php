@@ -14,6 +14,7 @@ class Gallery extends Model
         'name',
         'gallery_description',
         'thumbnail',
+        'gallery_comments',
         'user_id', // Assuming you have a user_id foreign key
     ];
 

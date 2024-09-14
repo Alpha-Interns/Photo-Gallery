@@ -4,7 +4,7 @@
 
 @section('content')
     <h1>Galleries</h1>
-    <a href="{{ route('galleries.create') }}" class="btn btn-primary">Create New Gallery</a>
+    {{-- <a href="{{ route('galleries.create') }}" class="btn btn-primary">Create New Gallery</a> --}}
 
     <div class="row">
         @foreach($galleries as $gallery)

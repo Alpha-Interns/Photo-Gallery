@@ -15,7 +15,7 @@ class Photo extends Model
         'photo_comment',
         'Upload_time',
         'gallery_id',
-        'photo_path',
+        'path',
     ];
 
     // Relationships

@@ -20,7 +20,7 @@ class GalleryFactory extends Factory
         return [
             'name' => $this->faker->sentence(3),
             'gallery_description' => $this->faker->paragraph(), 
-            // 'gallery_comments' => $this->faker->paragraph(),
+            'gallery_comments' => $this->faker->paragraph(),
             'thumbnail' => $this->faker->imageUrl(640, 480, 'nature', true), 
             'user_id' => User::inRandomOrder()->first()->id ?? User::factory(), // Existing user or new user
             'thumbnail'=>$this->faker->imageUrl(640, 480, 'nature', true, 'Faker'),
