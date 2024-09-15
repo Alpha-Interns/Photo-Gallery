@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Photosen &mdash; Colorlib Website Template</title>
+  <title>Group Alpha Photo Gallery</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -51,15 +51,16 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2" data-aos="fade-down">
-            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Photosen</a></h1>
+            <h3 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Group Alpha Photo Gallery</a></h3>
           </div>
           <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="/">Home</a></li>
+                <li class="active"><a href="index.html">Home</a></li>
                 <li class="has-children">
                   <a href="single.html">Gallery</a>
+                  <!--
                   <ul class="dropdown">
                     <li><a href="#">Nature</a></li>
                     <li><a href="#">Portrait</a></li>
@@ -75,6 +76,7 @@
                         <li><a href="#">Menu Two</a></li>
                         <li><a href="#">Menu Three</a></li>
                       </ul>
+                   
                     </li>
                   </ul>
                 </li>
@@ -82,10 +84,10 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
-              <x-flash-msg/>
+               -->
             </nav>
           </div>
-
+<!--
           <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
@@ -103,7 +105,7 @@
                 </li>
               </ul>
             </div>
-
+        -->
             <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
           </div>
@@ -118,7 +120,7 @@
     <div class="footer py-4">
         <div class="container-fluid text-center">
            <a href="/gallery/create"
-                class="btn btn-primary">Create Gellery</a>
+                class="absolute top-1/3 right-10 bg-black text-white py-2 px-5">Create Gallery</a>
           <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
@@ -129,7 +131,7 @@
       
     </div>
 
-    
+    <x-flash-msg/>
     <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
     <script src="{{asset('js/jquery-migrate-3.0.1.min.js')}}"></script>
     <script src="{{asset('js/jquery-ui.js')}}"></script>
