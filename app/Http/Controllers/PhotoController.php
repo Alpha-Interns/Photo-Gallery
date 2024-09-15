@@ -50,30 +50,12 @@ class PhotoController extends Controller
                     'Upload_time' => now(),
                 ]);
             }
+         }
 
-
-
-    // $request->validate([
-    //     'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-    //     'photo_description' => 'nullable|string',
-    //     'photo_comment' => 'nullable|string',
-    // ]);
-
- 
-    // if ($request->hasFile('image')) {
-    //     $imagePath = $request->file('image')->store('images', 'public');
-        
-       
-    //     Photo::create([
-    //         'path' => $imagePath,
-    //         'gallery_id' => $gallery->id,
-    //         'photo_description' => $request->input('photo_description', null),
-    //         'photo_comment' => $request->input('photo_comment', null),
-    //         'Upload_time' => now(),
-    //     ]);
+         return redirect('/gallery/'. $gallery->id)->with('success', 'Photo uploaded successfully.');
     }
 
-    return redirect('/gallery/'. $gallery->id)->with('success', 'Photo uploaded successfully.');
-}
-
+    public function edit(Gallery $gallery, Photo $photo){
+        return view('gallerys.editPhotos', compact('gallery', 'photo'));
+    }
 }
