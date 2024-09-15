@@ -25,10 +25,9 @@
 
                 <a href="/gallery/{{$image->gallery_id}}/photos/{{$image->id}}">
                 <img src="{{$image->path ? asset('storage/'.$image->path) : asset('images/person_1.jpg')}}" 
-                alt="IMage" class="img-fluid"><a href="/gallery/{{$gallery->id}}/photos/{{$image->id}}/edit" class="btn btn-primary">Edit</a></a>
+                alt="IMage" class="img-fluid"></a>
                 
                 <div class="text-center mt-4">
-                  <a href="/gallery/{{$gallery->id}}/photos/{{$image->id}}/edit" class="btn btn-primary">Edit</a>
                  </div>
 
             </div>
