@@ -1,23 +1,45 @@
-@extends('layouts.app')
+<x-layout>
 
-@section('title', 'Galleries')
 
-@section('content')
-    <h1>Galleries</h1>
-    {{-- <a href="{{ route('galleries.create') }}" class="btn btn-primary">Create New Gallery</a> --}}
+<div class="container-fluid" data-aos="fade" data-aos-delay="500">
+<div class="row">
 
-    <div class="row">
-        @foreach($galleries as $gallery)
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{{ asset('storage/' . $gallery->thumbnail) }}" class="card-img-top" alt="{{ $gallery->name }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $gallery->name }}</h5>
-                        <p class="card-text">{{ $gallery->gallery_description }}</p>
-                        <a href="{{ route('galleries.show', $gallery->id) }}" class="btn btn-primary">View Gallery</a>
-                    </div>
-                </div>
-            </div>
-        @endforeach
+@unless (count($galleries)==0)
+@foreach ($galleries as $gallery)
+
+<div class="col-lg-4">
+
+    <div class="image-wrap-2">
+      <div class="image-info">
+
+        <div class="mt-4 p-2 flex space-x-6 ">
+          <a href="/gallery/{{$gallery->id}}/edit">Edit</a>
+         </div>
+
+         <form  method="post" action="/gallery/{{$gallery->id}}">
+          @csrf
+          @method('DELETE')
+          <button class=" btn-outline-white py-2 px-4">Delete</button>
+        </form>
+
+        <h2 class="mb-3">{{$gallery->name}}</h2>
+        
+        <a href="/gallery/{{$gallery->id}}" class="btn btn-outline-white py-2 px-4">More Photos</a>
+      </div>
+      <img src="{{$gallery->thumbnail ? asset('storage/'.$gallery->thumbnail) : asset('images/person_1.jpg')}}"
+       alt="Image" class="img-fluid">
+      
+       
     </div>
-@endsection
+
+</div>   
+@endforeach
+@else
+<p>No galleries Found</p> 
+<a href="{{ route('galleries.create') }}" class="btn btn-primary">Create New Gallery</a>   
+@endunless
+<a href="{{ route('galleries.create') }}" class="btn btn-primary">Create New Gallery</a>
+</div>
+</div>
+ </div>
+</x-layout>

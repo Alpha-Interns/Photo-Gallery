@@ -23,7 +23,7 @@ class GalleryController extends Controller
         $formField = $request->validate([
             'name'=>['required',Rule::unique('galleries','name')],
             'gallery_description'=>'required',
-            'gallery_comments'=>'required',
+            'gallery_comment'=>'required',
         ]);
 
         if($request->hasFile('thumbnail')){
@@ -32,7 +32,7 @@ class GalleryController extends Controller
 
         Gallery::create($formField);
 
-        return redirect('/')->with('message','gellery created successufully');
+        return redirect('/')->with('message','gallery created successufully');
     }
 
     public function edit(Gallery $gallery)

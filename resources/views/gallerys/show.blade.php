@@ -38,9 +38,9 @@
             @endunless
         </div>
         <div class="text-center mt-4">
-          <a href="/gallery/{{$gallery->id}}/upload" class="btn btn-primary">
+          <!-- <a href="/gallery/{{$gallery->id}}/upload" class="btn btn-primary">
              Upload New Photos
-          </a>   
+          </a>    -->
        </div>
        {{-- <div class="text-center mt-4">
         <a href="/gallery/{{$gallery->id}}/photos/{{$image->id}}/edit" class="btn btn-primary">Edit</a>

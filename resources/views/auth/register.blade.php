@@ -1,3 +1,4 @@
+<x-layout>
 <form method="POST" action="{{ route('register') }}">
     @csrf
     <label for="name">Name</label>
@@ -14,3 +15,4 @@
     
     <button type="submit">Register</button>
 </form>
+</x-layout>

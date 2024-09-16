@@ -11,7 +11,7 @@
     <div class="image-wrap-2">
       <div class="image-info">
 
-        <div class="mt-4 p-2 flex space-x-6 ">
+        <!-- <div class="mt-4 p-2 flex space-x-6 ">
           <a href="/gallery/{{$gallery->id}}/edit">Edit</a>
          </div>
 
@@ -19,7 +19,7 @@
           @csrf
           @method('DELETE')
           <button class=" btn-outline-white py-2 px-4">Delete</button>
-        </form>
+        </form> -->
 
         <h2 class="mb-3">{{$gallery->name}}</h2>
         
@@ -38,6 +38,8 @@
 @endunless
 
 </div>
-</div>
+
+    <!-- <a href="{{ route('galleries.create') }}" class="btn btn-primary">Create New Gallery</a>  -->
+  </div>
 
 </x-layout>
