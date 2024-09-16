@@ -43,7 +43,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="gallery_comments"
-                    placeholder="Example: 👌😍 lovery"
+                    placeholder="Example: 👌😍 lovely"
                     value="{{$gallery->gallery_comments}}"/>
                     @error('gallery_comments')
                         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
