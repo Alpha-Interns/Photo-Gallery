@@ -10,23 +10,23 @@
 
   <script src="//unpkg.com/alpinejs" defer></script>
 
-  <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-  <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
-  <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
-  <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
-  <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/bootstrap.min.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('css/magnific-popup.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('css/jquery-ui.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('css/owl.carousel.min.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('css/owl.theme.default.min.css')); ?>">
 
-  <link rel="stylesheet" href="{{asset('css/lightgallery.min.css')}}">    
+  <link rel="stylesheet" href="<?php echo e(asset('css/lightgallery.min.css')); ?>">    
 
-  <link rel="stylesheet" href="{{asset('css/bootstrap-datepicker.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/bootstrap-datepicker.css')); ?>">
 
-  <link rel="stylesheet" href="{{asset('fonts/flaticon/font/flaticon.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('fonts/flaticon/font/flaticon.css')); ?>">
 
-  <link rel="stylesheet" href="{{asset('css/swiper.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/swiper.css')); ?>">
 
-  <link rel="stylesheet" href="{{asset('css/aos.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/aos.css')); ?>">
 
-  <link rel="stylesheet" href="{{asset('css/style.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
 
 </head>
 <body>
@@ -82,7 +82,26 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
-              <x-flash-msg/>
+              <?php if (isset($component)) { $__componentOriginalef2154c4b1054a3a28aacfea8e05a555 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginalef2154c4b1054a3a28aacfea8e05a555 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.flash-msg','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('flash-msg'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginalef2154c4b1054a3a28aacfea8e05a555)): ?>
+<?php $attributes = $__attributesOriginalef2154c4b1054a3a28aacfea8e05a555; ?>
+<?php unset($__attributesOriginalef2154c4b1054a3a28aacfea8e05a555); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalef2154c4b1054a3a28aacfea8e05a555)): ?>
+<?php $component = $__componentOriginalef2154c4b1054a3a28aacfea8e05a555; ?>
+<?php unset($__componentOriginalef2154c4b1054a3a28aacfea8e05a555); ?>
+<?php endif; ?>
             </nav>
           </div>
 
@@ -113,7 +132,8 @@
       
     </header>
 
-    {{$slot}}
+    <?php echo e($slot); ?>
+
 
     <div class="footer py-4">
         <div class="container-fluid text-center">
@@ -130,24 +150,24 @@
     </div>
 
     
-    <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
-    <script src="{{asset('js/jquery-migrate-3.0.1.min.js')}}"></script>
-    <script src="{{asset('js/jquery-ui.js')}}"></script>
-    <script src="{{asset('js/popper.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('js/jquery.stellar.min.js')}}"></script>
-    <script src="{{asset('js/jquery.countdown.min.js')}}"></script>
-    <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
-    <script src="{{asset('js/swiper.min.js')}}"></script>
-    <script src="{{asset('js/aos.js')}}"></script>
+    <script src="<?php echo e(asset('js/jquery-3.3.1.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/jquery-migrate-3.0.1.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/jquery-ui.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/popper.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/bootstrap.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/owl.carousel.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/jquery.stellar.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/jquery.countdown.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/jquery.magnific-popup.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/bootstrap-datepicker.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/swiper.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/aos.js')); ?>"></script>
   
-    <script src="{{asset('js/picturefill.min.js')}}"></script>
-    <script src="{{asset('js/lightgallery-all.min.js')}}"></script>
-    <script src="{{asset('js/jquery.mousewheel.min.js')}}"></script>
+    <script src="<?php echo e(asset('js/picturefill.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/lightgallery-all.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/jquery.mousewheel.min.js')); ?>"></script>
   
-    <script src="{{asset('js/main.js')}}"></script>
+    <script src="<?php echo e(asset('js/main.js')); ?>"></script>
     
     <script>
       $(document).ready(function(){
@@ -156,4 +176,4 @@
     </script>
   
   </body>
-  </html>    
+  </html>    <?php /**PATH C:\Users\Lenovo\Desktop\Photo-Gallery\resources\views/components/layout.blade.php ENDPATH**/ ?>
