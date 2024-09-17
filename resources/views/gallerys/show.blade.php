@@ -15,9 +15,9 @@
         </div>
         <div class="row" id="lightgallery">
 
-          <div  data-aos="fade" data-src="images/big-images/nature_big_1.jpg" data-sub-html="<h4>aliquid?</p>">
+          {{-- <div  data-aos="fade" data-src="images/big-images/nature_big_1.jpg" data-sub-html="<h4>aliquid?</p>">
             <a href="#"><img src="images/nature_small_1.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
+          </div> --}}
 
             @unless (count($images)==0)
 

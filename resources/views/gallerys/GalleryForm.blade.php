@@ -2,11 +2,11 @@
     <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
         <h1 class="text-3xl font-bold mb-8 text-center">Create New Gallery</h1>
 
-        @if(session('success'))
+        {{-- @if(session('success'))
             <div class="bg-green-100 text-green-700 p-4 rounded mb-6">
                 {{ session('success') }}
             </div>
-        @endif
+        @endif --}}
 
         <form method="post" action="/gallery" enctype="multipart/form-data" class="space-y-8">
             @csrf
