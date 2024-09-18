@@ -10,7 +10,7 @@ class PhotoController extends Controller
 {
     public function show(Gallery $gallery){
         // dd($gallery->photos);
-        return view('gallerys.show',[
+        return view('galleries.show',[
             'gallery' => $gallery,
             'images'=>$gallery->photos
         ]);
@@ -20,14 +20,14 @@ class PhotoController extends Controller
     // should bind to by updating the controller method to expect both the Gallery and Photo models
 
     public function image(Gallery $gallery, Photo $photo){
-        return view('gallerys.images',[
+        return view('galleries.images',[
             
             'image'=>$photo
         ]);
     } 
 
     public function create(Gallery $gallery){
-        return view('gallerys.PhotoForm', ['gallery' => $gallery]);
+        return view('galleries.PhotoForm', ['gallery' => $gallery]);
     }
     
     public function store(Request $request, Gallery $gallery){

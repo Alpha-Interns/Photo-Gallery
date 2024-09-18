@@ -22,7 +22,8 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/galleries');
+            // Redirect to the galleries.index route on successful login
+            return redirect()->intended(route('galleries.index'));
         }
 
         return back()->withErrors([

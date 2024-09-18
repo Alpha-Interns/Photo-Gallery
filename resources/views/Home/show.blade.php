@@ -26,12 +26,11 @@
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" >
 
               <a href="/gallery/{{$image->gallery_id}}/photos/{{$image->id}}">
-                <img src="{{$image->path ? asset('storage/'.$image->path) : asset('images/person_1.jpg')}}" 
-                alt="IMage" class="img-fluid"></a>
-                  {{-- <h3>
-                    {{$gallery->thumbnail ? asset('storage/'.$gallery->thumbnail) : asset('images/person_1.jpg')}}
-                     <a href="/gallery/{{$image->gallery_id}}/photos/{{$image->id}}">{{$image->path}}</a>
-                  </h3> --}}
+              <img src="{{ filter_var($image->path, FILTER_VALIDATE_URL) ? $image->path : asset('storage/' . $image->path) }}" 
+                   alt="Image" 
+                   class="img-fluid">
+
+             
             </div>
             @endforeach
             
@@ -39,11 +38,11 @@
             <p>No Image(s) Found</p>
             @endunless
         </div>
-        <div class="text-center mt-4">
+        <!-- <div class="text-center mt-4">
           <a href="/gallery/{{$gallery->id}}/upload" class="btn btn-primary">
              Upload New Photos
           </a>
-       </div>
+       </div> -->
       </div>
    </div>
 </x-layout>

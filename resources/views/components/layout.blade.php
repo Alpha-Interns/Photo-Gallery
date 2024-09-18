@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Photosen &mdash; Colorlib Website Template</title>
+  <title>PhotoGallery &mdash; Colorlib Website Template</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -51,15 +51,15 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2" data-aos="fade-down">
-            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Photosen</a></h1>
+            <h1 class="mb-0"><a href="/" class="text-white h2 mb-0">Alpha Photo Gallery</a></h1>
           </div>
           <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="/">Home</a></li>
-                <li class="has-children">
-                  <a href="single.html">Gallery</a>
+                <li class="active"><a href="/">Galleries</a></li>
+                <!-- <li class="has-children">
+                  <a href="single.html">Galleries</a>
                   <ul class="dropdown">
                     <li><a href="#">Nature</a></li>
                     <li><a href="#">Portrait</a></li>
@@ -80,7 +80,7 @@
                 </li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li> -->
               </ul>
             </nav>
           </div>
@@ -88,18 +88,18 @@
           <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
-                <li>
+                <!-- <li>
                   <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                </li> -->
+                <li>
+                  <a href="/login" class="pl-3 pr-3"><span class="icon-login">LogIn</span></a>
                 </li>
                 <li>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                  <a href="/register" class="pl-3 pr-3"><span class="icon-signup">Sign-Up</span></a>
                 </li>
-                <li>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                </li>
-                <li>
+                <!-- <li>
                   <a href="#" class="pl-3 pr-3"><span class="icon-youtube-play"></span></a>
-                </li>
+                </li> -->
               </ul>
             </div>
 
@@ -117,7 +117,7 @@
     <div class="footer py-4">
         <div class="container-fluid text-center">
            <a href="/gallery/create"
-                class="absolute top-1/3 right-10 bg-black text-white py-2 px-5">Create Gellery</a>
+                class="absolute top-1/3 right-10 bg-black text-white py-2 px-5">Photos are stories words can never tell</a>
           <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
